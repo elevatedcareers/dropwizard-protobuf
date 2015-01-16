@@ -23,10 +23,9 @@
     </licenses>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:dropwizard/dropwizard-protobuf.git</developerConnection>
-        <connection>scm:git:https://github.com/dropwizard/dropwizard-protobuf.git</connection>
-        <url>https://github.com/dropwizard/dropwizard-protobuf</url>
-        <tag>HEAD</tag>
+        <connection>scm:git:git@github.com:elevatedcareers/dropwizard-protobuf.git</connection>
+        <url>git@github.com:elevatedcareers/dropwizard-protobuf.git</url>
+        <developerConnection>scm:git:git@github.com:elevatedcareers/dropwizard-protobuf.git</developerConnection>
     </scm>
 
     <ciManagement>
@@ -54,20 +53,22 @@
     </repositories>
 
     <distributionManagement>
-        <site>
-            <id>dropwizard-protobuf</id>
-            <url>http://dropwizard.github.io/dropwizard-protobuf/${project.version}</url>
-        </site>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
+        <!-- use the following if you're not using a snapshot version. -->
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <uniqueVersion>false</uniqueVersion>
+            <id>releases</id>
+            <name>Internal Releases</name>
+            <url>http://nexus.elevatedcareers.com:8081/nexus/content/repositories/releases</url>
+            <layout>default</layout>
         </repository>
+
+        <!-- use the following if you ARE using a snapshot version. -->
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Internal Snapshots</name>
+            <url>http://nexus.elevatedcareers.com:8081/nexus/content/repositories/snapshots</url>
+            <layout>default</layout>
+        </snapshotRepository>
     </distributionManagement>
 
     <developers>
