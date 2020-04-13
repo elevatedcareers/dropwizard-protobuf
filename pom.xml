@@ -7,7 +7,7 @@
 
     <groupId>io.dropwizard.modules</groupId>
     <artifactId>dropwizard-protobuf</artifactId>
-    <version>0.7.1-5-protobuf2.4.1-SNAPSHOT</version>
+    <version>0.7.2</version>
     <packaging>jar</packaging>
     
     <name>Dropwizard Protocol Buffers Support</name>
