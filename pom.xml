@@ -5,6 +5,13 @@
         <maven>3.0.1</maven>
     </prerequisites>
 
+    <parent>
+      <groupId>com.eharmony.elevatedcareers</groupId>
+      <artifactId>elevated-parent</artifactId>
+      <version>1.0</version>
+      <relativePath>../elevated-parent</relativePath>
+    </parent>
+
     <groupId>io.dropwizard.modules</groupId>
     <artifactId>dropwizard-protobuf</artifactId>
     <version>0.7.2</version>
@@ -52,26 +59,6 @@
         </repository>
     </repositories>
 
-          <distributionManagement>
-        <!-- use the following if you're not using a snapshot version. -->
-        <repository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>releases</id>
-            <name>Internal Releases</name>
-            <url>http://nexus.cogent6.com:8081/repository/maven-releases</url>
-            <layout>default</layout>
-        </repository>
-
-        <!-- use the following if you ARE using a snapshot version. -->
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Internal Snapshots</name>
-            <url>http://nexus.cogent6.com:8081/repository/maven-snapshots</url>
-            <layout>default</layout>
-        </snapshotRepository>
-    </distributionManagement>
-
-
     <developers>
         <developer>
             <id>jplock</id>
@@ -80,13 +67,6 @@
             <timezone>America/New_York</timezone>
         </developer>
     </developers>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <dropwizard.version>0.7.1</dropwizard.version>
-        <protobuf.version>2.5.0</protobuf.version>
-    </properties>
 
     <dependencies>
         <dependency>
